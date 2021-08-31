@@ -3,6 +3,8 @@ import {
   BaseEntity,
   Column,
   PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 
 // Users entity
@@ -18,7 +20,7 @@ export default class Clients extends BaseEntity {
   lastname: string
 
   @Column()
-  usename: string
+  username: string
 
   @Column({
     unique: true,
@@ -27,4 +29,10 @@ export default class Clients extends BaseEntity {
 
   @Column()
   password: string
+
+  @CreateDateColumn()
+  createAt: Date;
+
+  @UpdateDateColumn()
+  updateAt: Date;
 }

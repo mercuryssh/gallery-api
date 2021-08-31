@@ -24,7 +24,7 @@ module.exports = {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
-  ignorePatterns: ['node_modules', 'dist'],
+  ignorePatterns: ['node_modules', 'dist', 'build'],
   rules: {
     '@typescript-eslint/indent': [2, 2],
     'import/no-unresolved': [2, { commonjs: true, amd: true }],
