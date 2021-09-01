@@ -3,9 +3,11 @@ import {
   BaseEntity,
   Column,
   PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
+  CreateDateColumn, UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm';
+import Authentications from '../auth/entities';
 
 // Users entity
 @Entity('Client')
@@ -22,13 +24,14 @@ export default class Clients extends BaseEntity {
   @Column()
   username: string
 
-  @Column({
-    unique: true,
+  @ManyToOne(
+    () => Authentications,
+    (auth) => auth.client,
+  )
+  @JoinColumn({
+    name: 'auth_id',
   })
-  email: string
-
-  @Column()
-  password: string
+  auth: Authentications
 
   @CreateDateColumn()
   createAt: Date;

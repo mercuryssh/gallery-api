@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from './app';
+import app from './index';
 import conn from './connetion';
 
 describe('Todos Api', () => {

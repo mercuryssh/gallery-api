@@ -38,5 +38,6 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/no-cycle': 0,
   },
 };

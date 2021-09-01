@@ -1,4 +1,4 @@
-import app from './server/app';
+import app from './server';
 import conn from './server/connetion';
 
 const bootstrap = async () => {
