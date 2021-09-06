@@ -1,5 +1,5 @@
 import { Connection, createConnection } from 'typeorm';
-import Clients from '../clients/entities';
+import path from 'path';
 
 const conn = async (): Promise<Connection> => {
   try {
@@ -10,12 +10,11 @@ const conn = async (): Promise<Connection> => {
       username: process.env.DB_USER,
       password: process.env.PASSWORD,
       database: process.env.DB_NAME,
-      entities: ['src/**/entities.ts'],
+      entities: [path.join(__filename, '../**/entities.ts')],
       synchronize: true,
     });
     return connetion;
   } catch (error) {
-    console.log(error);
     throw new Error('Unable to connect to database');
   }
 };
