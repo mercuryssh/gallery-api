@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "start": "node dist/index",
-    "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "build": "tsc",
     "test": "jest --preset ts-jest --watchAll --detectOpenHandles",
     "lint": "eslint --ext .tsx,.ts src",
     "pre-commit": "yarn lint",
