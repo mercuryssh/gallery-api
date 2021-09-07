@@ -1,7 +1,7 @@
 import {
   Entity,
   BaseEntity,
-  PrimaryColumn,
+  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn, UpdateDateColumn,
   OneToMany,
@@ -11,8 +11,8 @@ import Clients from '../clients/entities';
 
 @Entity('Authentications')
 export default class Authentications extends BaseEntity {
-  @PrimaryColumn('uuid')
-  id: string
+  @PrimaryGeneratedColumn()
+  id: number
 
   @Column({
     unique: true,

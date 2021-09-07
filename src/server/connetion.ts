@@ -10,7 +10,7 @@ const conn = async (): Promise<Connection> => {
       username: process.env.DB_USER,
       password: process.env.PASSWORD,
       database: process.env.DB_NAME,
-      entities: [path.join(__filename, '../**/entities.ts')],
+      entities: [path.join(__filename, '../../**/entities{.ts,.js}')],
       synchronize: true,
     });
     return connetion;
