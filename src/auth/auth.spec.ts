@@ -18,7 +18,7 @@ describe('Authentications Todo', () => {
       .post('/auth/login')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .send({ password: 'pass', email: 'mashuMS@gmail.com' })
+      .send({ password: 'Stronge_Password4444', email: 'auth@test.com' })
       .expect(200, done);
   });
 });
