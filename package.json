@@ -15,7 +15,8 @@
     "pre-commit": "yarn lint",
     "pre-push": "yarn test",
     "post-merge": "yarn install",
-    "post-rewrite": "yarn install"
+    "post-rewrite": "yarn install",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
